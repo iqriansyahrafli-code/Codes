@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <!-- Pengaturan Karakter dan Tampilan -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul Halaman -->
+    <title>Detail Makanan | FOOD PARADISE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/detail.css">
+
+</head>
+
+<body>
+
+    <!-- ===========================================
+         HEADER
+    ============================================ -->
+
+    <header class="detail-header">
+
+        <a href="index.html" class="back-btn">
+            ← Kembali ke Beranda
+        </a>
+
+    </header>
+
+    <!-- ===========================================
+         HALAMAN DETAIL MAKANAN
+    ============================================ -->
+
+    <section class="detail-section">
+
+        <div class="container">
+
+            <div class="detail-container">
+
+                <!-- Gambar Makanan -->
+                <div class="detail-image">
+
+                    <img
+                        id="detail-image"
+                        src="images/Ayam-Goreng-Pecak.jpg"
+                        alt="Detail Makanan">
+
+                </div>
+
+                <!-- Informasi Makanan -->
+                <div class="detail-info">
+
+                    <h2 id="detail-name">
+                        Nama Makanan
+                    </h2>
+
+                    <h3 id="detail-price">
+                        Rp00.000
+                    </h3>
+
+                    <p id="detail-description">
+
+                        Deskripsi makanan akan ditampilkan
+                        menggunakan JavaScript.
+
+                    </p>
+
+                    <button id="order-btn">
+                        Pesan Sekarang
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================================
+         MODAL FORM PEMESANAN
+    ============================================ -->
+
+    <div id="orderModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Form Pemesanan</h2>
+
+            <label for="customerName">
+                Nama Pemesan
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Masukkan nama">``
+
+            <label for="tableNumber">
+                Nomor Meja
+            </label>
+
+            <input
+                type="number"
+                id="tableNumber"
+                min="1"
+                placeholder="Contoh : 5">
+
+            <label for="quantity">
+                Jumlah Pesanan
+            </label>
+
+            <input
+                type="number"
+                id="quantity"
+                min="1"
+                placeholder="Masukkan jumlah pesanan">
+
+            <div class="modal-button">
+
+                <button id="cancelOrder">
+                    Batal
+                </button>
+
+                <button id="confirmOrder">
+                    Pesan
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================================
+         MODAL HASIL PEMESANAN
+    ============================================ -->
+
+    <div id="resultModal" class="modal">
+
+        <div class="modal-content receipt">
+
+            <h2>FOOD PARADISE</h2>
+
+            <h3>Pesanan Sedang Diproses</h3>
+
+            <hr>
+
+            <div class="result-row">
+                <span class="label">Nama Pemesan</span>
+                <span class="value" id="resultName"></span>
+            </div>
+
+            <div class="result-row">
+                <span class="label">Nomor Meja</span>
+                <span class="value" id="resultTable"></span>
+            </div>
+
+            <div class="result-row">
+                <span class="label">Menu</span>
+                <span class="value" id="resultMenu"></span>
+            </div>
+
+            <div class="result-row">
+                <span class="label">Harga</span>
+                <span class="value" id="resultPrice"></span>
+            </div>
+
+            <div class="result-row">
+                <span class="label">Jumlah</span>
+                <span class="value" id="resultQuantity"></span>
+            </div>
+
+            <hr>
+
+            <div class="result-row total-row">
+
+                <span class="label">
+                    Total Harga
+                </span>
+
+                <span
+                    class="value"
+                    id="resultTotal">
+                </span>
+
+            </div>
+
+            <hr>
+
+            <p class="thanks-message">
+
+                Terima kasih telah memesan di
+                <strong>FOOD PARADISE</strong>.
+
+                <br><br>
+
+                Pesanan Anda sedang diproses.
+                Silakan menunggu hingga pesanan
+                diantar ke meja Anda.
+
+            </p>
+
+            <button id="closeResult">
+                Tutup
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================================
+         JAVASCRIPT
+    ============================================ -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
